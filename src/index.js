@@ -4,11 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';          // import Bootstrap CSS into counter project
+import Counter from './components/counter';         // Counter class doesnt need {} bc its default export / the only component being exported from that file
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Counter />,
   document.getElementById('root')
 );
 
