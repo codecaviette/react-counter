@@ -5,11 +5,13 @@ import React, { Component } from 'react';
 class Counter extends Component {
     state = {                        // class comp Counter holds state 
         count: 0,
+        imageUrl: 'https://picsum.photos/200',      // this will pick a random 200x200 image
     };
     
     render() {                                 // render method has return stmt inside curly braces
         return (                               // within return stmt is jsx
-            <div>                              
+            <div>    
+                <img src={this.state.imageUrl} alt=""/>                          
                 <span> {this.formatCount()}</span>    
                 <button> Increment </button>
             </div>
