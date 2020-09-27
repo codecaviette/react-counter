@@ -8,29 +8,18 @@ class Counter extends Component {
         tags: ['tag1', 'tag2', 'tag3'],
     };
     
-    render() {                                 // render method has return stmt inside curly braces
-             
+    //Helper method: Determines what to display depending on whether or not there are tags in the state
+    renderTags() {
+        if (this.state.tags.length === 0) return <p>There are no tags</p>;
+        return <ul> {this.state.tags.map(tag => <li key={tag}> {tag} </li>)} </ul>       // Dynamically build list in React by mapping thru tags array and assigning each item to be a list item
+    }
+
+    render() {                                 // render method has return stmt inside curly braces         
         return (                               // within return stmt is jsx
             <div>    
-                <span className={this.getBadgeClasses()} > {this.formatCount()}</span>    
-                <button className="btn btn-secondary btn-sm"> Increment </button>
-                <ul>
-                    {this.state.tags.map(tag => <li key={tag}> {tag} </li>)}        {/* Dynamically build list in React by mapping thru tags array and assigning each item to be a list item */}
-                </ul>
+                { this.renderTags() }
             </div>
         );
-    }
-
-    // Change color of badge depending on this.state.count value
-    getBadgeClasses() {
-        let classes = "badge m-2 badge-";
-        classes += (this.state.count === 0) ? "warning" : "primary";     //if count equals 0, then append "warning" to what classes equals and set that as new value for classes var; otherwise, append "primary"
-        return classes;
-    }
-
-    formatCount() {
-        const { count } = this.state;           // Destructured this.state.count object so can use shortened "count" in next line rather than "this.state.count"
-        return count === 0 ? "Zero" : count;
     }
 }
 
