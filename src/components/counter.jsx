@@ -4,20 +4,17 @@ import React, { Component } from 'react';
 
 class Counter extends Component {
     state = {                        // class comp Counter holds state 
-        count: 0,
-        //imageUrl: 'https://picsum.photos/200',      // this will pick a random 200x200 image
+        count: 1,
     };
     
-    // Hoisted styling to use in render method
-    styles = {
-        fontSize: 10, 
-        fontWeight: "bold",
-    };
-
     render() {                                 // render method has return stmt inside curly braces
+        // Change color of badge depending on state.count value 
+        let classes = "badge m-2 badge-";
+        classes += (this.state.count === 0) ? "warning" : "primary";        //if count equals 0, then append "warning" to what classes equals and set that as new value for classes var; otherwise, append "primary"
+    
         return (                               // within return stmt is jsx
             <div>    
-                <span style={this.styles} className="badge badge-primary m-2" > {this.formatCount()}</span>    
+                <span className={classes} > {this.formatCount()}</span>    
                 <button className="btn btn-secondary btn-sm"> Increment </button>
             </div>
         );
