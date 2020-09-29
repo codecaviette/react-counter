@@ -15,7 +15,7 @@ class Counter extends Component {
     }
 
     //Helper method: Defines event handler for button's onClick 
-    handleIncrement = () => {                       // Arrow functions inherit the "this" keyword
+    handleIncrement = () => {                       // Bind event handler using arrow functions which inherit the "this" keyword
         console.log('Increment Clicked', this);
     }
 
