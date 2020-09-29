@@ -8,6 +8,11 @@ class Counter extends Component {
         tags: ['tag1', 'tag2', 'tag3'],
     };
     
+    constructor(){
+        super();
+        this.handleIncrement = this.handleIncrement.bind(this);          //This bind method will return a new instance of the handleIncrement method
+    }
+
     //Helper method: Determines what to display depending on whether or not there are tags in the state
     renderTags() {                                                                       // Class components do not use "function" keyword to define function
         if (this.state.tags.length === 0) return <p>There are no tags</p>;               // This defines conditional rendering
@@ -16,7 +21,7 @@ class Counter extends Component {
 
     //Helper method: Defines event handler for button's onClick 
     handleIncrement() {
-        console.log('Increement Clicked');
+        console.log('Increment Clicked', this);
     }
 
     render() {                                 // render method has return stmt inside curly braces         
