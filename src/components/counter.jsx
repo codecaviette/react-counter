@@ -16,7 +16,7 @@ class Counter extends Component {
 
     //Helper method: Defines event handler for button's onClick 
     handleIncrement = () => {                       // Bind event handler using arrow functions which inherit the "this" keyword
-        console.log('Increment Clicked', this);
+        this.setState( { count: this.state.count + 1 } );        // setState updates the state so that the new count is current count plus 1
     }
 
     render() {                                 // render method has return stmt inside curly braces         
