@@ -30,9 +30,6 @@ class Counter extends Component {
     formatCount() {
         const { count } = this.state;           // Destructured this.state.count object so can use shortened "count" in next line rather than "this.state.count"
         return count === 0 ? "Zero" : count;
-}
-
-
-}
+}}
 
 export default Counter;
