@@ -16,10 +16,7 @@ class Counters extends Component {
     render() {
         return (
             <div>
-                <Counter />
-                <Counter />
-                <Counter />
-                <Counter />
+                { this.state.counters.map(counter => <Counter key={counter.id} /> )}           {/* map through counters property of Counters component's state and return each item in the Counter (singular) format */}
             </div>
         )
     }
