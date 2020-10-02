@@ -4,12 +4,12 @@ import React, { Component } from 'react';
 
 class Counter extends Component {
     state = {                        // class comp Counter holds state 
-        count: 0,
+        value: this.props.value
     };
 
     //Helper method: Defines event handler for button's onClick 
     handleIncrement = () => {                       // Bind event handler using arrow functions which inherit the "this" keyword
-        this.setState( { count: this.state.count + 1 } );        // setState updates the state so that the new count is current count plus 1
+        this.setState( { value: this.state.value + 1 } );        // setState updates the state so that the new count is current count plus 1
     }
 
     render() {                                 // render method has return stmt inside curly braces         
@@ -24,11 +24,11 @@ class Counter extends Component {
     // Change color of badge depending on this.state.count value
     getBadgeClasses() {
         let classes = "badge m-2 badge-";
-        classes += (this.state.count === 0) ? "warning" : "primary";     //if count equals 0, then append "warning" to what classes equals and set that as new value for classes var; otherwise, append "primary"
+        classes += (this.state.value === 0) ? "warning" : "primary";     //if count equals 0, then append "warning" to what classes equals and set that as new value for classes var; otherwise, append "primary"
         return classes;
     }
     formatCount() {
-        const { count } = this.state;           // Destructured this.state.count object so can use shortened "count" in next line rather than "this.state.count"
+        const { value: count } = this.state;           // Destructured this.state.count object so can use shortened "count" in next line rather than "this.state.count"
         return count === 0 ? "Zero" : count;
 }}
 
