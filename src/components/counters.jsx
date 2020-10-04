@@ -2,14 +2,15 @@
 
 import React, { Component } from 'react';
 import Counter from './counter';
+import Header from './Header';
 
 class Counters extends Component {
     state = {
         counters: [
-            { id: 1, value: 4},
-            { id: 2, value: 0},
-            { id: 3, value: 0},
-            { id: 4, value: 0},
+            { item: 'shirt', id: 1, value: 4},
+            { item: 'jeans', id: 2, value: 2},
+            { item: 'sweater', id: 3, value: 1},
+            { item: 'shoes', id: 4, value: 1},
         ]
     };
     
@@ -23,10 +24,10 @@ class Counters extends Component {
     render() {
         return (
             <div>
+                <Header />
                 {/* map through counters property of Counters component's state and return each item in the Counter (singular) format */}
-                
                 { this.state.counters.map(counter => 
-                    <Counter key={counter.id} value={counter.value} id={counter.id} onDelete={this.handleDelete} /> )}           {/* Pass state (value) as prop to child Counter comp */}
+                    <Counter key={counter.id} value={counter.value} item={counter.item} id={counter.id} onDelete={this.handleDelete} /> )}           {/* Pass state (value) as prop to child Counter comp */}
             
             </div>
         )
