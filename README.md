@@ -2,5 +2,15 @@ Inspired by Mosh Hamedani's React tutorial, this dynamic React app creates an in
 
 Preview of default page:
 <div style="text-align:center">
-  <img width="750" alt="homepage maximized" src="https://github.com/codecaviette/react-grocerylist/blob/master/public/images/homepage_max.png">
+  <img width="750" alt="homepage maximized" src="https://github.com/codecaviette/react-shopping-cart/blob/master/public/images/homepage.png">
+</div>
+
+Preview of adding item:
+<div style="text-align:center">
+  <img width="750" alt="homepage maximized" src="https://github.com/codecaviette/react-shopping-cart/blob/master/public/images/add_item.png">
+</div>
+
+Preview of removing item:
+<div style="text-align:center">
+  <img width="750" alt="homepage maximized" src="https://github.com/codecaviette/react-shopping-cart/blob/master/public/images/remove_item.png">
 </div>
