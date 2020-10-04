@@ -13,11 +13,20 @@ class Counters extends Component {
         ]
     };
     
+    // Event handler for raised/lifted event from child component
+    // Will pass as prop to child component so child can use it
+    handleDelete = () => {
+        console.log('Event handler created');
+    };
+
     render() {
         return (
             <div>
+                {/* map through counters property of Counters component's state and return each item in the Counter (singular) format */}
+                
                 { this.state.counters.map(counter => 
-                <Counter key={counter.id} value={counter.value} /> )}           {/* map through counters property of Counters component's state and return each item in the Counter (singular) format */}
+                    <Counter key={counter.id} value={counter.value} onDelete={this.handleDelete} /> )}           {/* Pass state (value) as prop to child Counter comp */}
+            
             </div>
         )
     }
