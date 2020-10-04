@@ -17,7 +17,7 @@ class Counter extends Component {
             <div>   
                 <span className={this.getBadgeClasses()} > {this.formatCount()}</span>              {/* Be sure to use () after method in order to call it */}    
                 <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm"> Increment </button>        {/* In this case, we are NOT using () after method bc we only want it to be called when button is clicked, not when page loads */}
-                <button onClick={this.props.onDelete} className="btn btn-danger btn-sm m-2"> Delete </button>
+                <button onClick={() => this.props.onDelete(this.props.id)} className="btn btn-danger btn-sm m-2"> Delete </button>
             </div>
         );
     }
