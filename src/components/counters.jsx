@@ -16,7 +16,8 @@ class Counters extends Component {
     // Event handler for raised/lifted event from child component
     // Will pass as prop to child component so child can use it
     handleDelete = (counterId) => {
-        console.log('Event handler created', counterId);            // Test to make sure event handler is working
+        const counters = this.state.counters.filter(counter => counter.id !== counterId);       // filter thru Counters comp's state to create a new array with only ids that do NOT match the clicked id
+        this.setState( { counters: counters });         // then, create new state by settings the const counters to equal state.counters
     };
 
     render() {
