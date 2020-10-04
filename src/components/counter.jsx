@@ -15,7 +15,7 @@ class Counter extends Component {
     render() {                                 // render method has return stmt inside curly braces         
         return (                               // within return stmt is jsx
             <div>   
-                <span>{this.props.item}</span>
+                <span style={{ fontWeight:"bold" }}>{this.props.item}</span>
                 <span className={this.getBadgeClasses()} > {this.formatCount()}</span>              {/* Be sure to use () after method in order to call it */}    
                 <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm"> + </button>        {/* In this case, we are NOT using () after method bc we only want it to be called when button is clicked, not when page loads */}
                 <button onClick={() => this.props.onDelete(this.props.id)} className="btn btn-danger btn-sm m-2"> Remove </button>

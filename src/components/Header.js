@@ -4,7 +4,7 @@ class Header extends Component {
     render() {
         return (
             <div>
-                <h3> Shopping Cart </h3>
+                <h3 style={{backgroundColor:"lightblue" }}> Shopping Cart </h3>
             </div>
         )
     }
