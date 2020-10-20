@@ -6,10 +6,16 @@ Preview of default page:
     <img width="400" alt="homepage maximized" src="https://github.com/codecaviette/react-shopping-cart/blob/master/public/images/homepage.png">
   </kbd>
 </div>
+
+</br>
 Preview of adding item:
 <div style="text-align:center">
-  <img width="400" alt="homepage maximized" src="https://github.com/codecaviette/react-shopping-cart/blob/master/public/images/add_item.png">
+  <kbd>
+    <img width="400" alt="homepage maximized" src="https://github.com/codecaviette/react-shopping-cart/blob/master/public/images/add_item.png">
+  </kbd>
 </div>
+
+</br>
 Preview of removing item:
 <div style="text-align:center">
   <kbd>
