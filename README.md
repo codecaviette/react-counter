@@ -2,7 +2,9 @@ This dynamic React app creates an interactive shopping cart through the followin
 
 Preview of default page:
 <div style="text-align:center">
-  <img width="400" alt="homepage maximized" src="https://github.com/codecaviette/react-shopping-cart/blob/master/public/images/homepage.png">
+  <kbd>
+    <img width="400" alt="homepage maximized" src="https://github.com/codecaviette/react-shopping-cart/blob/master/public/images/homepage.png">
+  </kbd>
 </div>
 Preview of adding item:
 <div style="text-align:center">
@@ -10,5 +12,7 @@ Preview of adding item:
 </div>
 Preview of removing item:
 <div style="text-align:center">
-  <img width="400" alt="homepage maximized" src="https://github.com/codecaviette/react-shopping-cart/blob/master/public/images/remove_item.png">
+  <kbd>
+    <img width="400" alt="homepage maximized" src="https://github.com/codecaviette/react-shopping-cart/blob/master/public/images/remove_item.png">
+  </kbd>
 </div>
