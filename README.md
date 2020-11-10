@@ -1,4 +1,4 @@
-This dynamic React app creates an interactive shopping cart through the following React functionalities: Passing state, Modifying state from child component. Shoppers can add and remove items from their cart. Inspired by Mosh Hamedani's React tutorial.
+This responsive React app creates an interactive shopping cart through the following React functionalities: Passing state, Modifying state from child component. Shoppers can add and remove items from their cart. Inspired by Mosh Hamedani's React tutorial.
 
 <div style="text-align:center">
   <kbd>
